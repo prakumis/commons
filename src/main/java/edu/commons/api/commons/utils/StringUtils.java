@@ -4,7 +4,7 @@
 package edu.commons.api.commons.utils;
 
 /**
- * @author emiprav
+ * @author Praveen
  *
  */
 public class StringUtils {
@@ -17,12 +17,15 @@ public class StringUtils {
 
 	}
 
-	public static String isNullOrBlank(String str) {
-		System.out.println("Incoming string is: "+str);
-		if(null==str) {
-			return null;
+	public static boolean isNullOrBlank(String string) {
+
+		boolean result = false;
+		if (string != null && string.trim().length() != 0) {
+			result = false;
 		} else {
-			return str.trim();
+			result = true;
 		}
+		return result;
+
 	}
 }
